@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Encriptador de texto</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
+        
+    </head>
+    
+    <body>
+        <header>
+            <img src="img/Logo.png" class="logoAlura">
+        </header>
+
+        <main>
+            <section>
+                <div>
+                    <textarea id="textoEncriptado" cols="30" rows="10" class="campo-texto" placeholder="Ingrese el texto aqui"></textarea>
+                </div>
+                
+                <div class="mensajeAlerta">
+                    <img src="img/bi_exclamation-circle-fill.png" class="alert">
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+
+                <div>
+                    <button class="botonEncryp" onclick="botonEncriptar();"> Encriptar </button>
+                    <button class="botonDesencryp" onclick="botonDesencriptar();"> Desencriptar</button>
+                </div>
+            </section>
+
+            <section class="campo-mensaje">
+                <div class="claseMensaje" id="mostrarSalida">
+                    <textarea id="mensajeEncriptado" class="mensajeCifrado"></textarea>
+                </div>
+                
+                <img src="img/Muñeco.png" class="muñeco" id="muñecoMensaje">
+
+                <div class="salidaMensaje" id="mensajeOut">
+                    <h3>Ningún mensaje fue <br> encontrado</h3>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+
+                <div class="botonCopiar" id="copiarBo">
+                    <input type="button" class="copiarB" value="Copiar" onclick="botonCopiar()">
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <p> &copy Desarrollado por Sarita Jaramillo</p>
+            
+            <a href="https://www.linkedin.com/in/sarita-eusse-jaramillo-3151aa250"><img src="img/logo-linkedin-icon-1024.png" class="linkedin"></a>
+            <a href="https://github.com/Prosarita"><img src="img/GitHub-Symbol.png" class="github"></a>
+        </footer>
+
+        <div id="mensajeCopiado" class="mensaje-copiado">
+            <p>Texto copiado al portapapeles</p>
+            <button class="cerrar-mensaje" onclick="cerrarMensajeCopiado()">Cerrar</button>
+        </div>
+
+        <script src="app.js" ></script>
+    </body>
+</html>

@@ -1,0 +1,216 @@
+*{
+    font-family: 'inter', sans-serif;
+    background-color: #F3F5FC;
+}
+
+header{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+main{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.logoAlura{
+    width: 120px;
+    height: 48px;
+    margin: 40px;
+}
+
+.campo-texto{
+    width: 24em;
+    height: 15em;
+    resize: none;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    cursor: text;
+    color: #0A3871;
+    outline: none;
+}
+
+.campo-texto::placeholder, .campo-texto{
+    color: #0A3871;
+    opacity: 80%;
+}
+
+.alert{
+    float: left;
+    padding-right: 3px;
+}
+
+.mensajeAlerta{
+    height: 18px;
+    line-height: 18px;
+    width: 229px;
+    color: #495057;
+    font-size: 13px;
+    height: 18px;
+    font-weight: 400;
+    opacity: 80%;
+}
+
+.botonEncryp{
+    width: 272px;
+    height: 64px;
+    border-radius: 24px;
+    font-size: 16px;
+    padding: 24px;
+    color: #D8DFE8;
+    background-color: #0A3871;
+    margin: 3% 1% auto;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.botonDesencryp{
+    width: 272px;
+    height: 64px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-size: 16px;
+    padding: 24px;
+    color: #0A3871;
+    background-color: #D8DFE8;
+    margin: 3% 1% auto;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.botonEncryp.deshabilitado, .botonDesencryp.deshabilitado{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.campo-mensaje{
+    width: 20em;
+    height: 38em;
+    top: 40px;
+    left: 1000px;
+    border-radius: 32px;
+    background-color: white;
+    position: absolute;
+    box-shadow: 0 24px 32px -8px rgba(0,0,0,50);
+    padding-right: 20px;
+}
+
+.claseMensaje{
+    width: 95%;
+    margin-left: 2%;
+    background-color: white;
+    padding-left: 5%;
+    padding-top: 4%;
+    border-radius: 24px;
+}
+
+.muñeco{
+    background-color: white;
+    width: 80%;
+    padding-left: 30px;
+    margin-top: 50%;
+}
+
+.salidaMensaje{
+    text-align: center;
+    background-color: white;
+    padding-left: 15px;
+}
+
+.salidaMensaje h3{
+    font-weight: bold;
+}
+
+.salidaMensaje p{
+    font-size: 0.8rem;
+}
+
+.salidaMensaje h3, .salidaMensaje p{
+    background-color: white;
+    padding: 8px;
+}
+
+.botonCopiar{
+    background-color: white;
+    text-align: center;
+    margin-left: 3%;
+    border-radius: 24px;
+}
+
+.copiarB{
+    width: 90%;
+    height: 4em;
+    color:#0A3871;
+    background-color: white;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    margin-top: 1.5em;
+    margin-left: 1em;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.mensajeCifrado{
+    width: 12em;
+    height: 19em;
+    font-size: 1.5em;
+    resize: none;
+    background-color: white;
+    border: none;
+    outline: none;
+    padding-top: 3%;
+    padding-left: 2%;
+}
+
+.footer{
+    text-align: center;
+    font-size: 0.675em;
+}
+
+.linkedin{
+    width: 2em;
+    margin-top: 1%;
+    padding-right: 1em;
+    cursor: pointer;
+}
+
+.github{
+    width: 3.5%;
+    margin-top: 1%;
+    padding-right: 1em;
+    cursor: pointer;
+}
+
+.mensaje-copiado {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    z-index: 1000;
+    display: none;
+}
+  
+.mensaje-copiado p {
+    margin: 0;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    
+}
+  
+.cerrar-mensaje {
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
