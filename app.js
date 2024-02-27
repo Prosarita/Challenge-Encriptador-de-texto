@@ -82,12 +82,7 @@ function deshabilitarBoton() {
     encriptar.classList.add("deshabilitado");
     desencriptar.classList.add("deshabilitado");
 }
-  
-function habilitarBoton() {
-    const encriptar = document.getElementById("encriptar");
-    const desencriptar = document.getElementById("desencriptar");
-    encriptar.classList.remove("deshabilitado");
-    desencriptar.classList.remove("deshabilitado");
+    return fraseDesencriptada;
 }
 
 
