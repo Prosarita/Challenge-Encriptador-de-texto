@@ -25,14 +25,12 @@ function botonEncriptar(){
     const texto = procesoEncriptacion(mensaje_encriptar.value, matrizEncriptacion);
 
     if(!validarMayusCarac(texto.value) || texto == ""){
-        alert('No se permiten mayusculas o caracteres especiales')
-        deshabilitarBoton();
+        alert('No se permiten mayusculas o caracteres especiales');
     }else{
         estiloSalida();
         campo_mensaje.value = texto;
         document.getElementById("textoEncriptado").value = '';
         document.getElementById("copiarBo").value= "Copiar";
-        habilitarBoton();
     }
 }
 
@@ -51,40 +49,29 @@ function procesoEncriptacion(fraseEncriptada, matriz){
 function botonDesencriptar(){
     const textoNormal = procesoDesencriptar(mensaje_encriptar.value,matrizEncriptacion);
 
-    if(!validarMayusCarac(textoNormal.value) ||textoNormal == ""){
-        deshabilitarBoton();
+    if(!validarMayusCarac(textoNormal.value) || textoNormal == ""){
+        alert('No se permiten mayusculas o caracteres especiales');
     }else{
         estiloSalida();
         campo_mensaje.value = textoNormal;
         document.getElementById("textoEncriptado").value = '';
         document.getElementById("copiarBo").value= "Copiar";
-        habilitarBoton();
     }
-
-
 }
 
 function procesoDesencriptar(fraseDesencriptada, matriz){
     for(let i = 0; i < matriz.length; i++){
         if(fraseDesencriptada.includes(matriz[i][1])){
-            fraseDesencriptada = fraseDesencriptada.replaceAll(
-                matriz[i][1],
-                matriz[i][0]
-            )
-       }
+            fraseDesencriptada = fraseDesencriptada
+            .replace(/ai/, "a")
+            .replace(/enter/, "e")
+            .replace(/imes/, "i")
+            .replace(/ober/, "o")
+            .replace(/ufat/, "u");
+        }
     }
     return fraseDesencriptada;
 }
-
-function deshabilitarBoton() {
-    const encriptar = document.getElementById("encriptar");
-    const desencriptar = document.getElementById("desencriptar");
-    encriptar.classList.add("deshabilitado");
-    desencriptar.classList.add("deshabilitado");
-}
-    return fraseDesencriptada;
-}
-
 
 function botonCopiar(){
     navigator.clipboard.writeText(campo_mensaje.value);
@@ -93,7 +80,7 @@ function botonCopiar(){
     setTimeout(() => {
       document.getElementById("copiarBo").classList.remove("animar")
       mostrarMensajeCopiado()
-    }, 500)
+    }, 300)
 }
 
 function mostrarMensajeCopiado() {
